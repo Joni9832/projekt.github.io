@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Rep Max Calculator</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+        body {
+            font-family: 'Arial', sans-serif; 
+            margin: 0;
+            padding: 0;
+            background-color: #333; 
+            color: #fff; 
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Kaushan Script', cursive; 
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            font-family: 'Arial', sans-serif; 
+            font-weight: bold;
+            font-size: 16px; 
+            transition: background-color 0.3s; 
+        }
+
+        nav a:hover {
+            background-color: #555; 
+        }
+
+        section {
+            padding: 20px;
+            font-family: 'Arial', sans-serif; 
+        }
+
+        section h2 {
+            font-weight: bold; 
+            color: #ffA500; 
+            font-size: 24px; 
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Style for the forms */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        label,
+        input,
+        button {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #888;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>One Rep Max Calculator</h1>
+    </header>
+
+    <nav>
+        <a href="stranica.html">Home</a>
+        <a href="stranica2.html">Calculator</a>
+        <a href="stranica3.html">Images</a>
+        <a href="stranica4.html">About Us</a>
+		<a href="stranica5.html">BMI Calculator</a>
+		<a href="stranica6.html">Login</a>
+    </nav>
+
+    <section id="login">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="button" onclick="submitLogin()">Login</button>
+        </form>
+
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" required>
+
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" required>
+
+            <button type="button" onclick="submitRegistration()">Register</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2024 One Rep Max Calculator
+    </footer>
+
+    <script>
+        function submitLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Perform login validation (you can add your own logic here)
+            if (username === 'your_username' && password === 'your_password') {
+                alert('Login successful!'); // Replace with your actual login logic
+            } else {
+                alert('Login failed. Please check your username and password.');
+            }
+        }
+
+        function submitRegistration() {
+            var newUsername = document.getElementById('newUsername').value;
+            var newPassword = document.getElementById('newPassword').value;
+
+            // Perform registration logic (you can add your own logic here)
+            alert('Registration successful!'); // Replace with your actual registration logic
+        }
+    </script>
+
+</body>
+</html>

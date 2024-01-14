@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Rep Max Calculator</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+        body {
+            font-family: 'Arial', sans-serif; 
+            margin: 0;
+            padding: 0;
+            background-color: #333; 
+            color: #fff; 
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Kaushan Script', cursive; 
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            font-family: 'Arial', sans-serif; 
+            font-weight: bold;
+            transition: background-color 0.3s; 
+        }
+
+        nav a:hover {
+            background-color: #555; 
+        }
+
+        section {
+            padding: 20px;
+            font-family: 'Arial', sans-serif; 
+        }
+
+        section h2 {
+            font-weight: bold; 
+            color: #ffA500; 
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>One Rep Max Calculator</h1>
+    </header>
+
+    <nav>
+        <nav>
+        <a href="stranica.html">Home</a>
+        <a href="stranica2.html">Calculator</a>
+        <a href="stranica3.html">Images</a>
+        <a href="stranica4.html">About Us</a>
+		<a href="stranica5.html">BMI Calculator</a>
+		<a href="stranica6.html">Login</a>
+        </nav>
+
+    
+
+    <section id="calculator">
+    <h2 style="color: #ffA500;">One Rep Max Calculator</h2>
+    <p style="font-size: 18px; color: #ffA500; font-weight: bold;">Enter the weight and reps below to calculate your One Rep Max:</p>
+    <form id="ormCalculator">
+        <label for="weight">Weight:</label>
+        <input type="number" id="weight" required>
+        
+        <!-- Add a dropdown for unit selection -->
+        <select id="unit">
+            <option value="lbs">lbs</option>
+            <option value="kgs">kgs</option>
+        </select>
+
+        <label for="reps">Reps:</label>
+        <input type="number" id="reps" required>
+        <button type="button" onclick="calculateOneRepMax()">Calculate</button>
+    </form>
+    <p id="result"></p>
+</section>
+
+
+   
+
+    
+
+    <footer>
+        &copy; 2024 One Rep Max Calculator
+    </footer>
+
+    <script>
+        function calculateOneRepMax() {
+            var weight = document.getElementById('weight').value;
+            var reps = document.getElementById('reps').value;
+
+            if (weight && reps) {
+                var oneRepMax = Math.round(weight / (1.0278 - 0.0278 * reps));
+                document.getElementById('result').innerHTML = 'Your One Rep Max is: ' + oneRepMax + ' kg';
+            } else {
+                document.getElementById('result').innerHTML = 'Please enter both weight and reps.';
+            }
+        }
+    </script>
+
+</body>
+</html>
